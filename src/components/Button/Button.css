@@ -1,0 +1,40 @@
+/* Button.css — STYLES ONLY FOR THE BUTTON COMPONENT */
+/* This file lives next to Button.jsx so styles are easy to find */
+/* Only button-related styles go here — card styles live in PricingCard.css */
+
+/* Base button style (applies to all variants) */
+.download-button {
+    width: fit-content;
+    background-color: #e6e5e0;
+    border: none;
+    border-radius: 999px;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.download-button:hover {
+    background-color: #D8D6CE;
+}
+
+.download-button:active {
+    background-color: #D8D6CE;
+}
+
+/* Primary variant — applied when variant="primary" is passed to the Button component */
+/* The .primary class is added dynamically by the JSX template literal in Button.jsx */
+.download-button.primary {
+    background-color: #111;
+    color: #fff;
+}
+
+.download-button.primary:hover {
+    background-color: #333;
+}
+
+.download-button.primary:active {
+    background-color: #333;
+}

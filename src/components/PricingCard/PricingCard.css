@@ -1,0 +1,54 @@
+/* PricingCard.css — STYLES ONLY FOR THE PRICING CARD COMPONENT */
+/* Button styles are NOT here — they live in Button/Button.css */
+/* Each component owns its own styles, keeping things organised and easy to update */
+
+.card {
+    background-color: #f2f1ed;
+    border-radius: 12px;
+    padding: 40px 32px;
+    width: 320px;
+    flex-shrink: 0;
+}
+
+.card-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.card-price {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 24px;
+}
+
+.card-content {
+    margin-bottom: 32px;
+}
+
+.includes-text {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #333;
+}
+
+.checkmark {
+    color: #4a4a4a;
+    font-size: 18px;
+    margin-right: 12px;
+    font-weight: bold;
+}

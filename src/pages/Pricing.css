@@ -1,0 +1,11 @@
+/* Pricing.css — LAYOUT STYLES FOR THE PRICING PAGE */
+/* This controls how the cards are arranged on the page */
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
