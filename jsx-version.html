@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans — JSX version</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" data-type="module">
+        // Components can be used INSIDE other components — this is called "composition"
+        // This Button component is small, but it keeps button styling/logic in one place
+        // "variant" defaults to "secondary" if not provided — this is called a default parameter
+        function Button({ label, variant = "secondary" }) {
+            return (
+                // Template literal (``) lets us build a className string with the variant value
+                <button className={`download-button ${variant}`}>{label}</button>
+            );
+        }
+
+        // Same card UI, written as a JSX component (HTML-like syntax inside JavaScript)
+        // This component is reusable - we can create multiple cards by passing different data
+        function PricingCard({ title, price, includesText, features, buttonText, buttonVariant }) {
+            return (
+                // JSX uses "className" instead of "class" because "class" is a reserved word in JavaScript
+                <div className="card">
+                    {/* Curly braces { } let you insert JavaScript expressions into JSX */}
+                    <h1 className="card-title">{title}</h1>
+                    <p className="card-price">{price}</p>
+                    <div className="card-content">
+                        <p className="includes-text">{includesText}</p>
+                        <ul className="features-list">
+                            {/* .map() loops through the features array and creates a <li> for each item */}
+                            {features.map((feature, i) => (
+                                // "key" helps React track which items changed - using index (i) is OK for static lists
+                                <li key={i}>
+                                    <span className="checkmark">✓</span>
+                                    {feature}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    {/* Using our Button component instead of a raw <button> element */}
+                    <Button label={buttonText} variant={buttonVariant} />
+                </div>
+            );
+        }
+
+        function App() {
+            // In JSX, we separate DATA from PRESENTATION
+            // These objects hold all the content for each pricing card
+            const hobbyPlan = {
+                title: 'Hobby',
+                price: 'Free',
+                includesText: 'Includes:',
+                features: ['No credit card required', 'Limited Agent requests', 'Limited Tab completions'],
+                buttonText: 'Download',
+                buttonVariant: 'secondary',
+            };
+            const proPlan = {
+                title: 'Pro',
+                price: '$20/mo.',
+                includesText: 'Everything in Hobby, plus:',
+                features: [
+                    'Extended limits on Agent',
+                    'Unlimited Tab completions',
+                    'Background Agents',
+                    'Maximum context windows',
+                ],
+                buttonText: 'Get Pro',
+                buttonVariant: 'primary',
+            };
+
+            return (
+                // <> is a React Fragment - it groups elements without adding extra HTML divs
+                <>
+                    <p className="page-label"><strong>JSX version</strong> — same UI, built with components</p>
+                    <div className="cards-container">
+                        {/* The spread operator {...hobbyPlan} passes all object properties as individual props */}
+                        {/* This is the same as writing: title="Hobby" price="Free" includesText="Includes:" etc. */}
+                        <PricingCard {...hobbyPlan} />
+                        <PricingCard {...proPlan} />
+                    </div>
+                </>
+            );
+        }
+
+        // This tells React to render our App component into the <div id="root"> element
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
