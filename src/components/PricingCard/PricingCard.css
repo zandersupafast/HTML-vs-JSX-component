@@ -1,26 +1,46 @@
-/* PricingCard.css — STYLES ONLY FOR THE PRICING CARD COMPONENT */
-/* Button styles are NOT here — they live in Button/Button.css */
-/* Each component owns its own styles, keeping things organised and easy to update */
+/* PricingCard.css — STYLES FOR THE PRICING CARD COMPONENT */
+/* Matches the previous HTML project */
 
 .card {
+    display: flex;
+    flex-direction: column;
+    min-height: 380px;
     background-color: #f2f1ed;
-    border-radius: 12px;
-    padding: 40px 32px;
+    border-radius: 4px;
+    padding: 16px;
     width: 320px;
     flex-shrink: 0;
 }
 
+.card-top {
+    display: flex;
+    flex-direction: column;
+}
+
 .card-title {
-    font-size: 32px;
-    font-weight: 600;
-    color: #333;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #26251e;
     margin-bottom: 8px;
 }
 
 .card-price {
     font-size: 20px;
-    color: #666;
-    margin-bottom: 24px;
+    color: rgba(38, 37, 30, 0.5);
+    display: inline-flex;
+    align-items: baseline;
+}
+
+.card-price-amount {
+    font-size: 22px;
+    font-weight: 400;
+    color: rgba(38, 37, 30, 0.5);
+}
+
+.card-price-period {
+    font-size: 14px;
+    color: rgba(38, 37, 30, 0.5);
 }
 
 .card-content {
@@ -29,8 +49,8 @@
 
 .includes-text {
     font-size: 16px;
-    color: #333;
-    margin-bottom: 16px;
+    color: rgba(38, 37, 30, 0.5);
+    margin: 16px 0px;
 }
 
 .features-list {
@@ -41,14 +61,14 @@
 .features-list li {
     display: flex;
     align-items: center;
-    margin-bottom: 12px;
-    font-size: 15px;
-    color: #333;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #26251e;
 }
 
 .checkmark {
-    color: #4a4a4a;
-    font-size: 18px;
-    margin-right: 12px;
-    font-weight: bold;
+    color: #26251e;
+    font-size: 14px;
+    margin-right: 10px;
+    font-weight: 400;
 }

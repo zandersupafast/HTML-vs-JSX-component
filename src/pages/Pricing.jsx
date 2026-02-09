@@ -12,7 +12,8 @@ function Pricing() {
     // Changing this data automatically updates what the cards display
     const hobbyPlan = {
         title: 'Hobby',
-        price: 'Free',
+        priceAmount: 'Free',
+        pricePeriod: null,
         includesText: 'Includes:',
         features: ['No credit card required', 'Limited Agent requests', 'Limited Tab completions'],
         buttonText: 'Download',
@@ -20,7 +21,8 @@ function Pricing() {
     };
     const proPlan = {
         title: 'Pro',
-        price: '$20/mo.',
+        priceAmount: '$20',
+        pricePeriod: '/mo.',
         includesText: 'Everything in Hobby, plus:',
         features: [
             'Extended limits on Agent',
