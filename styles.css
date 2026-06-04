@@ -118,16 +118,47 @@ body {
 }
 
 .download-button.primary {
-    background-color: #111;
+    background-color: #00CC66;
     color: #fff;
 }
 
 .download-button.primary:hover {
-    background-color: #333;
+    background-color: #00b35a;
 }
 
 .download-button.primary:active {
+    background-color: #00b35a;
+}
+
+.download-button.secondary {
+    background-color: transparent;
+    color: #26251e;
+    border: 1px solid rgba(38, 37, 30, 0.35);
+}
+
+.download-button.secondary:hover {
+    background-color: #26251e;
+    color: #fff;
+    border-color: #26251e;
+}
+
+.download-button.secondary:active {
     background-color: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+.download-button.tertiary {
+    background-color: #e6e5e0;
+    color: #333;
+}
+
+.download-button.tertiary:hover {
+    background-color: #D8D6CE;
+}
+
+.download-button.tertiary:active {
+    background-color: #D8D6CE;
 }
 
 .page-label {
