@@ -25,14 +25,14 @@
 
 /* Primary variant — for "Get Pro" button */
 .download-button.primary {
-    background-color: #111;
+    background-color: #00CC66;
     color: #fff;
 }
 
 .download-button.primary:hover {
-    background-color: #333;
+    background-color: #00b35a;
 }
 
 .download-button.primary:active {
-    background-color: #333;
+    background-color: #00b35a;
 }
