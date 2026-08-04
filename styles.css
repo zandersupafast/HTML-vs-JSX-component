@@ -1,8 +1,21 @@
+/* ==========================================================================
+   Reset
+   Removes default browser spacing; box-sizing keeps padding inside width.
+   ========================================================================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
+/* ==========================================================================
+   Page canvas
+   Font: Inter (loaded in index.html)
+   Background: #f7f7f4 — warm off-white page fill
+   Layout: centered flex column, min full viewport height
+   ========================================================================== */
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -14,6 +27,12 @@ body {
     padding: 20px;
 }
 
+
+/* ==========================================================================
+   Cards container
+   Horizontal row of pricing cards; 24px gap between cards
+   ========================================================================== */
+
 .cards-container {
     display: flex;
     flex-direction: row;
@@ -22,6 +41,14 @@ body {
     justify-content: center;
     align-items: flex-start;
 }
+
+
+/* ==========================================================================
+   Pricing card
+   Fixed width 320px, min-height 380px
+   Background: #f2f1ed — slightly darker than page
+   Radius: 4px | Padding: 16px
+   ========================================================================== */
 
 .card {
     display: flex;
@@ -38,6 +65,13 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+
+/* ==========================================================================
+   Card typography
+   Title: 22px / 28px line-height, color #26251e
+   Price: muted rgba(38, 37, 30, 0.5) — amount, period split for styling
+   ========================================================================== */
 
 .card-title {
     font-size: 22px;
@@ -75,6 +109,12 @@ body {
     margin: 16px 0px;
 }
 
+
+/* ==========================================================================
+   Feature list
+   Unstyled list; checkmark + label per row, 8px row spacing
+   ========================================================================== */
+
 .features-list {
     list-style: none;
     padding: 0;
@@ -94,6 +134,14 @@ body {
     margin-right: 10px;
     font-weight: 400;
 }
+
+
+/* ==========================================================================
+   CTA buttons
+   Pill shape (999px radius), pinned to card bottom via margin-top: auto
+   Secondary: #e6e5e0 bg | Primary (.primary): #111 bg, white text
+   Hover/active states darken each variant
+   ========================================================================== */
 
 .download-button {
     margin-top: auto;
@@ -129,6 +177,12 @@ body {
 .download-button.primary:active {
     background-color: #333;
 }
+
+
+/* ==========================================================================
+   Demo label (index.html only)
+   Fixed badge at top center — identifies the HTML reference version
+   ========================================================================== */
 
 .page-label {
     position: fixed;

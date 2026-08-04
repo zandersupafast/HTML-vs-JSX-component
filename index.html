@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Document basics -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing Plans — HTML version</title>
+
+    <!-- Google Fonts: Inter (weights 400–700)
+         preconnect = faster font download -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Component styles (see styles.css) -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Demo label — not part of the pricing UI -->
     <p class="page-label"><strong>HTML version</strong> — static markup</p>
+
+    <!-- Pricing cards row -->
     <div class="cards-container">
+
+        <!-- Card: Hobby (free tier) -->
         <div class="card">
             <div class="card-top">
                 <h3 class="card-title">Hobby</h3>
@@ -36,8 +48,11 @@
                     </ul>
                 </div>
             </div>
+            <!-- Secondary CTA -->
             <button class="download-button secondary">Download</button>
         </div>
+
+        <!-- Card: Pro (paid tier) -->
         <div class="card">
             <div class="card-top">
                 <h3 class="card-title">Pro</h3>
@@ -67,7 +82,41 @@
                     </ul>
                 </div>
             </div>
+            <!-- Primary CTA -->
             <button class="download-button primary">Get Pro</button>
+        </div>
+
+        <!-- Card: Enterprise (team tier) -->
+        <div class="card">
+            <div class="card-top">
+                <h3 class="card-title">Enterprise</h3>
+                <p class="card-price">
+                    <span class="card-price-amount">Custom</span>
+                </p>
+                <div class="card-content">
+                    <p class="includes-text">Everything in Pro, plus:</p>
+                    <ul class="features-list">
+                        <li>
+                            <span class="checkmark">✓</span>
+                            SSO and domain verification
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Centralized team billing
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Admin usage and spend controls
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Priority support and onboarding
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Secondary CTA -->
+            <button class="download-button secondary">Contact sales</button>
         </div>
     </div>
 </body>
