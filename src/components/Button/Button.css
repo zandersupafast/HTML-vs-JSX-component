@@ -36,3 +36,13 @@
 .download-button.primary:active {
     background-color: #333;
 }
+
+/* Focus — yellow outline on all button variants */
+.download-button:focus {
+    outline: none;
+}
+
+.download-button:focus-visible {
+    outline: 2px solid yellow;
+    outline-offset: 2px;
+}

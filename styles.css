@@ -130,6 +130,30 @@ body {
     background-color: #333;
 }
 
+.download-button.tertiary {
+    background-color: transparent;
+    color: #111;
+    border: 1px solid #c8c7c2;
+}
+
+.download-button.tertiary:hover {
+    background-color: #e6e5e0;
+}
+
+.download-button.tertiary:active {
+    background-color: #e6e5e0;
+}
+
+/* Focus — yellow outline on all button variants (keyboard / :focus-visible) */
+.download-button:focus {
+    outline: none;
+}
+
+.download-button:focus-visible {
+    outline: 2px solid rgb(4, 0, 255);
+    outline-offset: 2px;
+}
+
 .page-label {
     position: fixed;
     top: 16px;
