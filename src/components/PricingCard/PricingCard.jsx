@@ -21,7 +21,7 @@ function PricingCard({ title, priceAmount, pricePeriod, includesText, features, 
                 <h3 className="card-title">{title}</h3>
                 <p className="card-price">
                     <span className="card-price-amount">{priceAmount}</span>
-                    {pricePeriod != null && <span className="card-price-period">{pricePeriod}</span>}
+                    <span className="card-price-period">{pricePeriod}</span>
                 </p>
                 <div className="card-content">
                     <p className="includes-text">{includesText}</p>

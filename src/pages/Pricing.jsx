@@ -15,9 +15,9 @@ function Pricing() {
         priceAmount: 'Free',
         pricePeriod: null,
         includesText: 'Includes:',
-        features: ['No credit card required', 'Limited Agent requests', 'Limited Tab completions'],
-        buttonText: 'Download',
-        buttonVariant: 'secondary',
+        features: ['No credit card required', 'Limited Agent requests', 'Limited Tab completions', 'Some agents'],
+        buttonText: 'Start for free',
+        buttonVariant: 'tertiary',
     };
     const proPlan = {
         title: 'Pro',
@@ -28,9 +28,22 @@ function Pricing() {
             'Extended limits on Agent',
             'Unlimited Tab completions',
             'Background Agents',
-            'Maximum context windows',
         ],
         buttonText: 'Get Pro',
+        buttonVariant: 'secondary',
+    };
+    const enterprisePlan = {
+        title: 'Enterprise',
+        priceAmount: 'Custom',
+        pricePeriod: null,
+        includesText: 'Everything in Pro, plus:',
+        features: [
+            'Unlimited Agent requests',
+            'Unlimited Tab completions',
+            'Background Agents',
+            'Maximum context windows',
+        ],
+        buttonText: 'Contact sales',
         buttonVariant: 'primary',
     };
 
@@ -40,9 +53,9 @@ function Pricing() {
             <p className="page-label"><strong>React App</strong> — running with Vite</p>
             <div className="cards-container">
                 {/* The spread operator {...hobbyPlan} passes all object properties as individual props */}
-                {/* This is the same as: title="Hobby" price="Free" includesText="Includes:" etc. */}
                 <PricingCard {...hobbyPlan} />
                 <PricingCard {...proPlan} />
+                <PricingCard {...enterprisePlan} />
             </div>
         </>
     );
