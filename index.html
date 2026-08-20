@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Document basics: character set and responsive scaling -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing Plans — HTML version</title>
+
+    <!-- Fonts: preconnect speeds up Google Fonts load -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Inter — weights 400–700 used across the page -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Local stylesheet: layout, colors, typography -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Dev label: identifies this as the static HTML demo (fixed at top) -->
     <p class="page-label"><strong>HTML version</strong> — static markup</p>
+
+    <!-- Pricing cards row: Hobby, Pro, and Enterprise side by side -->
     <div class="cards-container">
+
+        <!-- Card 1: Hobby (free tier) -->
         <div class="card">
             <div class="card-top">
                 <h3 class="card-title">Hobby</h3>
@@ -36,8 +47,11 @@
                     </ul>
                 </div>
             </div>
+            <!-- Secondary CTA: light pill button -->
             <button class="download-button secondary">Download</button>
         </div>
+
+        <!-- Card 2: Pro (paid tier) -->
         <div class="card">
             <div class="card-top">
                 <h3 class="card-title">Pro</h3>
@@ -67,8 +81,54 @@
                     </ul>
                 </div>
             </div>
+            <!-- Primary CTA: dark filled button -->
             <button class="download-button primary">Get Pro</button>
         </div>
+        <div class="card">
+            <div class="card-top">
+                <h3 class="card-title">Org</h3>
+                <p class="card-price">$30/mo</p>
+                <p class="card-content">Contact us to get started</p>
+                <ul class="features-list">
+                    <li>
+                        <span class="checkmark">✓</span>
+                        Unlimited Agent requests
+                    </li>
+                    <li>
+                        <span class="checkmark">✓</span>
+                        Unlimited Tab completions
+                    </li>
+                </ul>
+            </div>
+            <button class="download-button primary">Contact us</button>
+        </div>
+
+        <!-- Card 3: Enterprise (team tier) — copy this block to add another card -->
+        <div class="card">
+            <div class="card-top">
+                <h3 class="card-title">Enterprise</h3>
+                <p class="card-price">
+                    <span class="card-price-amount">$150</span>
+                    <span class="card-price-period">/mo.</span>
+                </p>
+                <div class="card-content">
+                    <p class="includes-text">Everything in Pro, plus:</p>
+                    <ul class="features-list">
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Unlimited Agent requests
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Unlimited Tab completions
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Secondary CTA: same style as Hobby -->
+            <button class="download-button secondary">Get Enterprise</button>
+        </div>
+
     </div>
 </body>
 </html>

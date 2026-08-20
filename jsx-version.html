@@ -57,9 +57,12 @@
                 title: 'Hobby',
                 price: 'Free',
                 includesText: 'Includes:',
-                features: ['No credit card required', 'Limited Agent requests', 'Limited Tab completions'],
-                buttonText: 'Download',
-                buttonVariant: 'secondary',
+                features: ['No credit card required', 
+                'Limited Agent requests', 
+                'Limited Tab completions', 
+                'Limited context windows', 'Unlimited API requests'],
+                buttonText: 'Start for free',
+                buttonVariant: 'tertiary',
             };
             const proPlan = {
                 title: 'Pro',
@@ -72,7 +75,26 @@
                     'Maximum context windows',
                 ],
                 buttonText: 'Get Pro',
+                buttonVariant: 'secondary',
+            };
+            const orgPlan = {
+                title: 'Org',
+                price: '$30/mo.',
+                includesText: 'Everything in Pro, plus:',
+                features: ['Unlimited Agent requests', 'Unlimited Tab completions', 'Unlimited context windows', 'Unlimited API requests'],
+                buttonText: 'Contact us',
                 buttonVariant: 'primary',
+            };
+            const enterprisePlan = {...proPlan,
+                title: 'Enterprise',
+                price: '$150/mo.',
+                includesText: 'Everything in Pro, plus:',
+                features: [
+                    'Unlimited Agent requests',
+                    'Unlimited Tab completions',
+                ],
+                buttonText: 'Get Enterprise',
+                buttonVariant: 'secondary',
             };
 
             return (
@@ -84,6 +106,7 @@
                         {/* This is the same as writing: title="Hobby" price="Free" includesText="Includes:" etc. */}
                         <PricingCard {...hobbyPlan} />
                         <PricingCard {...proPlan} />
+                        <PricingCard {...orgPlan} />
                     </div>
                 </>
             );
