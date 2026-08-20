@@ -130,6 +130,27 @@ body {
     background-color: #333;
 }
 
+.download-button.secondary {
+    background-color: #e9e4e4;
+    color: #202020;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.download-button.secondary:hover {
+    background-color: #333;
+}
+
+.download-button.secondary:active {
+    background-color: #c7c7c7;
+}
+
 .download-button.tertiary {
     background-color: transparent;
     border: 1px solid #e6e5e0;
