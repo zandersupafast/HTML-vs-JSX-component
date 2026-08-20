@@ -1,12 +1,27 @@
+/* ==========================================================================
+   Pricing Plans — HTML version
+   Designer reference: tokens, layout, and component styles
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   Reset
+   -------------------------------------------------------------------------- */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+/* --------------------------------------------------------------------------
+   Page layout
+   -------------------------------------------------------------------------- */
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #f7f7f4;
+    background-color: #f7f7f4;          /* Page background — warm off-white */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,20 +29,31 @@ body {
     padding: 20px;
 }
 
+
+/* --------------------------------------------------------------------------
+   Cards container
+   Horizontal row of pricing cards, centered
+   -------------------------------------------------------------------------- */
+
 .cards-container {
     display: flex;
     flex-direction: row;
-    gap: 24px;
+    gap: 24px;                          /* Space between cards */
     flex-wrap: nowrap;
     justify-content: center;
     align-items: flex-start;
 }
 
+
+/* --------------------------------------------------------------------------
+   Card shell
+   -------------------------------------------------------------------------- */
+
 .card {
     display: flex;
     flex-direction: column;
     min-height: 380px;
-    background-color: #f2f1ed;
+    background-color: #f2f1ed;          /* Card surface — slightly darker than page */
     border-radius: 4px;
     padding: 16px;
     width: 320px;
@@ -39,17 +65,22 @@ body {
     flex-direction: column;
 }
 
+
+/* --------------------------------------------------------------------------
+   Typography — plan name & price
+   -------------------------------------------------------------------------- */
+
 .card-title {
     font-size: 22px;
     line-height: 28px;
     font-weight: 400;
-    color: #26251e;
+    color: #26251e;                     /* Primary text — near-black warm tone */
     margin-bottom: 8px;
 }
 
 .card-price {
     font-size: 20px;
-    color: rgba(38, 37, 30, 0.5);
+    color: rgba(38, 37, 30, 0.5);       /* Muted price row */
     display: inline-flex;
     align-items: baseline;
 }
@@ -62,8 +93,13 @@ body {
 
 .card-price-period {
     font-size: 14px;
-    color: rgba(38, 37, 30, 0.5);
+    color: rgba(38, 37, 30, 0.5);       /* "/mo." suffix — smaller than amount */
 }
+
+
+/* --------------------------------------------------------------------------
+   Feature list
+   -------------------------------------------------------------------------- */
 
 .card-content {
     margin-bottom: 32px;
@@ -71,7 +107,7 @@ body {
 
 .includes-text {
     font-size: 16px;
-    color: rgba(38, 37, 30, 0.5);
+    color: rgba(38, 37, 30, 0.5);       /* "Includes:" / "Everything in Hobby, plus:" */
     margin: 16px 0px;
 }
 
@@ -95,12 +131,18 @@ body {
     font-weight: 400;
 }
 
+
+/* --------------------------------------------------------------------------
+   Buttons — shared base
+   Pinned to bottom of card via margin-top: auto
+   -------------------------------------------------------------------------- */
+
 .download-button {
     margin-top: auto;
     width: fit-content;
     background-color: #e6e5e0;
     border: none;
-    border-radius: 999px;
+    border-radius: 999px;               /* Pill shape (overridden on .secondary) */
     padding: 14px 24px;
     font-size: 16px;
     font-weight: 500;
@@ -116,6 +158,9 @@ body {
 .download-button:active {
     background-color: #D8D6CE;
 }
+
+
+/* Primary CTA — Pro plan (dark fill) */
 
 .download-button.primary {
     background-color: #111;
