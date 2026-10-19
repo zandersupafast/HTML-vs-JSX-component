@@ -10,9 +10,15 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Badge at the top of the page — not part of the pricing UI -->
     <p class="page-label"><strong>HTML version</strong> — static markup</p>
+
+    <!-- Row of pricing cards. Each .card is one plan; copy a card block to add another. -->
     <div class="cards-container">
+
+        <!-- Hobby plan -->
         <div class="card">
+            <!-- Title, price, and feature list -->
             <div class="card-top">
                 <h3 class="card-title">Hobby</h3>
                 <p class="card-price">
@@ -36,8 +42,11 @@
                     </ul>
                 </div>
             </div>
+            <!-- Light button (secondary) -->
             <button class="download-button secondary">Download</button>
         </div>
+
+        <!-- Pro plan — same markup as Hobby, different content -->
         <div class="card">
             <div class="card-top">
                 <h3 class="card-title">Pro</h3>
@@ -67,7 +76,71 @@
                     </ul>
                 </div>
             </div>
+            <!-- Dark button (primary) — the emphasized CTA -->
             <button class="download-button primary">Get Pro</button>
+        </div>
+
+        <!-- Org plan — same markup as the other cards -->
+        <div class="card">
+            <div class="card-top">
+                <h3 class="card-title">Org</h3>
+                <p class="card-price">
+                    <span class="card-price-amount">$30</span>
+                    <span class="card-price-period">/mo.</span>
+                </p>
+                <div class="card-content">
+                    <p class="includes-text">Everything in Pro, plus:</p>
+                    <ul class="features-list">
+                        <li>
+                            <span class="checkmark">✓</span>
+                            SSO / SAML authentication
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Unlimited Agent requests
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Unlimited Tab completions
+                        </li>
+                    </ul>
+                </div>
+            </div>
+                <!-- Light button (secondary), same as Hobby -->
+                <button class="download-button secondary">Get Org</button>
+        </div>
+
+        <!-- Enterprise plan — same markup as the other cards -->
+        <div class="card">
+            <div class="card-top">
+                <h3 class="card-title">Enterprise</h3>
+                <p class="card-price">
+                    <span class="card-price-amount">Custom</span>
+                </p>
+                <div class="card-content">
+                    <p class="includes-text">Everything in Pro, plus:</p>
+                    <ul class="features-list">
+                        <li>
+                            <span class="checkmark">✓</span>
+                            SSO / SAML authentication
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Advanced admin controls
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Invoice and PO billing
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Dedicated account support
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Light button (secondary), same as Hobby -->
+            <button class="download-button secondary">Contact Sales</button>
         </div>
     </div>
 </body>

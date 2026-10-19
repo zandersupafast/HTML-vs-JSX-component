@@ -58,8 +58,8 @@
                 price: 'Free',
                 includesText: 'Includes:',
                 features: ['No credit card required', 'Limited Agent requests', 'Limited Tab completions'],
-                buttonText: 'Download',
-                buttonVariant: 'secondary',
+                buttonText: 'Get it now',
+                buttonVariant: 'tertiary',
             };
             const proPlan = {
                 title: 'Pro',
@@ -74,6 +74,31 @@
                 buttonText: 'Get Pro',
                 buttonVariant: 'primary',
             };
+            const orgPlan = {
+                title: 'Org',
+                price: '$30/mo',
+                includesText: 'Everything in Pro, plus:',
+                features: [
+                    'SSO / SAML authentication',
+                    'Advanced admin controls',
+                    'Invoice and PO billing',
+                ],
+                buttonText: 'Contact Sales',
+                buttonVariant: 'secondary',
+            };
+            const enterprisePlan = {
+                title: 'Enterprise',
+                price: 'Custom',
+                includesText: 'Everything in Pro, plus:',
+                features: [
+                    'SSO / SAML authentication',
+                    'Advanced admin controls',
+                    'Invoice and PO billing',
+                    'Dedicated account support',
+                ],
+                buttonText: 'Contact Sales',
+                buttonVariant: 'secondary',
+            };
 
             return (
                 // <> is a React Fragment - it groups elements without adding extra HTML divs
@@ -84,6 +109,8 @@
                         {/* This is the same as writing: title="Hobby" price="Free" includesText="Includes:" etc. */}
                         <PricingCard {...hobbyPlan} />
                         <PricingCard {...proPlan} />
+                        <PricingCard {...orgPlan} />
+                        <PricingCard {...enterprisePlan} />
                     </div>
                 </>
             );
